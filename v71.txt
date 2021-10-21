@@ -1,0 +1,113 @@
+import colorama
+import threading
+import requests
+import time
+import os 
+import sys
+import random
+import urllib
+from bs4 import BeautifulSoup
+colorama.init()
+os.system("cls" if os.name == "nt" else "clear")
+filename = "success.txt"
+try:
+    open(filename, "a")
+except FileExistsError:
+    pass
+
+def parse_teks(teks):
+    try:
+        
+        pnjng = len(teks)
+        hitung = 50 - pnjng
+        result = teks+" "*hitung
+        return result
+    except:
+        pass
+    
+def stana():
+    for i in msg:
+        sys.stdout.write(i)
+        sys.stdout.flush()
+        time.sleep(0.02)
+def ketik(teks):
+ for i in teks + "\n":
+  sys.stdout.write(i)
+  sys.stdout.flush()
+  time.sleep(0.001)
+def runner(teks):
+ for i in teks + "\n":
+  sys.stdout.write(i)
+  sys.stdout.flush()
+  time.sleep(0.00001)
+  
+def simpan(konteks):
+    #
+    try:
+        baca = open(filename, "r").read()
+        if konteks in baca:
+            return False
+        else:
+            save = open(filename, "a")
+            save.write(konteks+"\n")
+            return True
+    except:
+        pass
+
+def final(source):
+    try:
+        soup = BeautifulSoup(source, "html.parser")
+        parsing = soup.find_all("ul", class_="tr")[1:]
+        for li in parsing:
+            try:
+                pisah = li.find_all("li")
+                domain = pisah[0].find("a").text.strip()
+                waktu = pisah[1].text
+            except (ValueError, IndexError):
+                pass
+            cek_simpan = simpan(domain)
+            parse_domain = parse_teks(domain)
+            try:
+                if cek_simpan:
+                    runner("\033[32m- site created : \033[37m"+waktu+"\033[37m | \033[32mDomains : \033[32m\033[37m"+parse_domain)
+                else:
+                    runner("\033[32m-\033[32m\033[31m Failed \033[31m\033[31mDuplicate Domains : \033[31m\033[37m"+parse_domain)
+            except:
+                pass
+    except:
+        pass
+
+def get_source(page):
+	for i in range(1, int(page)+1):
+		try:
+			site = "https://www.thesiterank.com/index.php?p="+str(i)
+			resp = requests.get(site, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"})
+			body = resp.text
+			final(body)
+		except requests.exceptions:
+			print("\x1b[0;31m ERROR! Please check your connection !!!")
+			
+ketik("""\033[32m
+ \033[32m _____            _       _____      _           _             _     \033[32m
+ \033[37m|  __ \          | |     / ____|    (_)         (_)           | |    \033[37m
+ \033[32m| |  | | ___  ___| | __ | |     _ __ _ _ __ ___  _ _ __   __ _| |____\033[32m
+ \033[37m| |  | |/ _ \/ __| |/ / | |    | '__| | '_ ` _ \| | '_ \ / _` | |_  /\033[37m
+ \033[32m| |__| |  __/\__ \   <  | |____| |  | | | | | | | | | | | (_| | |/ / \033[32m
+ \033[37m|_____/ \___||___/_|\_\  \_____|_|  |_|_| |_| |_|_|_| |_|\__,_|_/___|\033[37m
+ 
+\033[32m - \033[32m \033[37mDomains grabber\033[37m \033[32mVersion 7.1\033[32m 
+\033[32m - \033[32m \033[37mMore Priv8 tools,\033[37m\033[32m t.me/deskstore\033[32m
+\033[32m - \033[32m \033[37mContact,\033[37mTelegram :\033[32m @deskcriminalz\033[32m                                 
+                                                         
+\033[0m""")
+key=input("Key : ")
+if key == "v71":
+	print("\033[32mKey valid")
+else:
+	exit("\x1b[0;31mKey invalid, Please contact t.me/deskcriminalz")
+time.sleep(2)
+ketik("\033[37m[\033[32mHow much page?\033[32m\033[37m]\033[37m")
+p = input("\033[37mPage : ")
+msg = ("\033[32mGrabbed Started...\n\033[32m")
+stana()
+threading.Thread(target=get_source, args=(p,)).start()
