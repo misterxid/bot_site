@@ -2,7 +2,7 @@
 <center>
 <h2>Mohammed Kairz<h2>
   <center>
-  <h2>More priv8 tools, Telegram @mohammedkairz<h2>
+  <h3>More priv8 tools, Telegram @mohammedkairz<h3>
   <center>
     <br>
 <?php
