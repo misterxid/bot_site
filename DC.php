@@ -1,5 +1,8 @@
 <title>KRZ UPLOADER</title>
-<h2>Mohammed Kairz Priv8 uploaders<h2>
+<center>
+<h2>Mohammed Kairz<h2>
+  <center>
+  <h2>More priv8 tools, Telegram @mohammedkairz<h2>
   <center>
     <br>
 <?php
