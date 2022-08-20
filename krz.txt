@@ -1,0 +1,309 @@
+#!/usr/bin/python
+# -- coding: utf-8 -
+# krz 2021
+from colorama.ansi import clear_screen
+import os
+import os.path
+import platform
+import urllib
+import urllib.request
+from sys import argv
+import time
+import re
+import datetime
+import json
+import os
+import requests
+import socket
+import re
+import colorama
+from distutils.core import setup
+from colorama import Fore, init
+import colorsys
+from multiprocessing import Pool
+from multiprocessing.dummy import Pool as ThreadPool
+from re import findall as reg
+from pyfiglet import Figlet
+import random
+from bs4 import BeautifulSoup
+import tldextract
+from colorama import Fore, Back, Style
+from urllib.parse import urlparse
+colorama.init()
+custom_fig = Figlet(font='epic')
+init(autoreset=True)
+
+os.system('cls' if os.name == 'nt' else 'clear')
+print("""
+\033[31;1m
+\033[31;1m██╗  ██╗██████╗ ███████╗██████╗ ███████╗██╗   ██╗   ├ \033[37;1mPriv8 Tools
+\033[31;1m██║ ██╔╝██╔══██╗╚══███╔╝██╔══██╗██╔════╝██║   ██║   ├ \033[37;1mtelegram, @mohammedkairz
+\033[31;1m█████╔╝ ██████╔╝  ███╔╝ ██████╔╝█████╗  ██║   ██║   ├ \033[37;1mtelegram channel, @kzmtp
+\033[31;1m██╔═██╗ ██╔══██╗ ███╔╝  ██╔══██╗██╔══╝  ╚██╗ ██╔╝   ├ \033[37;1mStatus [\033[32;1mACTIVE\033[37;1m]
+\033[31;1m██║  ██╗██║  ██║███████╗██║  ██║███████╗ ╚████╔╝    ├ \033[37;1mUser   [\033[32;1mfangyin2244e\033[37;1m]
+\033[31;1m╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝  ╚═══╝  
+                                                 
+\033[97m[01] Reverse IP [V1]                   \033[91m[PRIV8]  \033[97m[With multi scan cms] 
+\033[97m[02] Reverse IP [V2]                   \033[91m[PRIV8]  \033[97m[Without scan cms]
+\033[97m[03] Reverse IP [combo]                \033[91m[PRIV8]  \033[97m[Multi scan all cms + Debug laravel] 
+\033[97m[04] Domains Grab [special]            \033[91m[PRIV8]  \033[97m[Get big site for one run] 
+""")
+key=input("Key : ")
+lis=requests.get("https://pastebin.com/raw/BavUepU9").text.splitlines()
+if key in lis:
+        print("Welcome..")
+else:
+        exit("Invalid Key")
+select = input("Select number: ")
+if select == "1":
+    tmip = []
+    if os.path.exists("KRZREV"):
+        pass
+    else:
+        os.mkdir("./KRZREV")
+    def checkCms(site):
+        if not site.startswith("http://"):
+            site = "http://" + site
+        try:
+            scan = requests.get(site, timeout=10).text
+        except:
+            return 0
+        if "wp-content" in scan:
+            open('./KRZREV/wordpress.txt', 'a').write(site + "\n")
+        elif 'Joomla' in scan and 'com_' in scan:
+            open('./KRZREV/joomla.txt', 'a').write(site + "\n")
+
+    def repip(url):
+        global tmip, scankah
+        res = []
+        try:
+            url = url.replace("/", "").replace("https",
+                                               "").replace("http", "").replace(":", "")
+            ip = socket.gethostbyname(url)
+        except:
+            print(url + ' '+'\033[31;1m[ERROR] ───> \033[37;1mBAD IPS')
+            return 0
+        headers = {
+            'User-agent': 'Mozilla/5.0 (Windows; Intel 10.13; rv:52.0) Gecko/20100101 Firefox/52.0'}
+        url = url.replace("/", "").replace("https",
+                                           "").replace("http", "").replace(":", "")
+        if ip in tmip:
+            print(url + "\033[31;1m [DUPLICATE LINE] ───> \033[37;1m REMOVED")
+        else:
+            tmip.append(ip)
+            grab = requests.get(
+                'https://www.threatcrowd.org/searchApi/v2/ip/report/?ip='+ip, headers=headers)
+            if grab.status_code == 200:
+                grab = grab.json()
+                if grab['response_code'] == "1":
+                    for i in grab["resolutions"]:
+                        i['domain'] = i['domain'].replace("webdisk.", "").replace("cpcalendars.", "").replace("autodiscover.", "").replace(
+                            "webmail.", "").replace("mail.", "").replace("cpcontacts.", "").replace("autodiscover.", "").replace("whm.", "").replace("cpanel.", "")
+                        if i['domain'] not in res:
+                            res.append(i["domain"])
+                            hasilrev = tldextract.extract(i["domain"])
+                            i['domain'] = hasilrev.domain + \
+                                "." + hasilrev.suffix
+                            open('./KRZREV/_Domains.txt',
+                                 'a').write(i['domain']+"\n")
+                else:
+                    print(url+"Zero")
+            print(url +' '+'[\033[32;1mGOOD\033[37;1m]──\033[32;1m>', len(res))
+            if (scankah == "" or scankah.lower() == "y"):
+                scanPool = ThreadPool(50)
+                scanPool.map(checkCms, res)
+                scanPool.close()
+                scanPool.join()
+
+    # options
+    urlpath = input('List : ')
+    if os.path.exists(urlpath):
+        url = open(urlpath, "r").read().splitlines()
+    else:
+        print("\033[31;1mError \033[37;1mList not found!!!")
+        exit()
+    thread = int(input('Thread : '))
+    scankah = input('Auto Check CMS? (Y/n) >')
+
+    print("\n")
+    mainPool = ThreadPool(thread)
+    mainPool.map(repip, url)
+    mainPool.close()
+    mainPool.join()
+    print('\n\033[32;1mSaved \033[37;1min File ./KRZREV/')
+
+elif select == "2":
+    tmip = []
+    if os.path.exists("KRZREV"):
+        pass
+    else:
+        os.mkdir("./KRZREV")
+    def repip(url):
+        global tmip, scankah
+        res = []
+        try:
+            url = url.replace("/", "").replace("https",
+                                               "").replace("http", "").replace(":", "")
+            ip = socket.gethostbyname(url)
+        except:
+            print(url + ' '+'\033[31;1m[ERROR] ───> \033[37;1mBAD IPS')
+            return 0
+        headers = {
+            'User-agent': 'Mozilla/5.0 (Windows; Intel 10.13; rv:52.0) Gecko/20100101 Firefox/52.0'}
+        url = url.replace("/", "").replace("https",
+                                           "").replace("http", "").replace(":", "")
+        if ip in tmip:
+            print(url + "\033[31;1m [DUPLICATE LINE] ───> \033[37;1m REMOVED")
+        else:
+            tmip.append(ip)
+            grab = requests.get(
+                'https://www.threatcrowd.org/searchApi/v2/ip/report/?ip='+ip, headers=headers)
+            if grab.status_code == 200:
+                grab = grab.json()
+                if grab['response_code'] == "1":
+                    for i in grab["resolutions"]:
+                        i['domain'] = i['domain'].replace("webdisk.", "").replace("cpcalendars.", "").replace("autodiscover.", "").replace(
+                            "webmail.", "").replace("mail.", "").replace("cpcontacts.", "").replace("autodiscover.", "").replace("whm.", "").replace("cpanel.", "")
+                        if i['domain'] not in res:
+                            res.append(i["domain"])
+                            open('./KRZREV/_Domains.txt',
+                                 'a').write(i["domain"]+"\n")
+                else:
+                    print(url+"Zero")
+            print(url +' '+'[\033[32;1mGOOD\033[37;1m]──\033[32;1m>', len(res))
+    # options
+    urlpath = input('List : ')
+    if os.path.exists(urlpath):
+        url = open(urlpath, "r").read().splitlines()
+    else:
+        print("\033[31;1mError \033[37;1mList not found!!!")
+        exit()
+    thread = int(input('Thread : '))
+
+    print("\n")
+    mainPool = ThreadPool(thread)
+    mainPool.map(repip, url)
+    mainPool.close()
+    mainPool.join()
+    print('\n\033[32;1mSaved \033[37;1min File ./KRZREV/')
+elif select == "3":
+    tmip = []
+    if os.path.exists("KRZREV"):
+        pass
+    else:
+        os.mkdir("./KRZREV")
+    def checkCms(site):
+        if not site.startswith("http://"):
+            site = "http://" + site
+        try:
+            scan = requests.get(site, timeout=10).text
+        except:
+            return 0
+        if "wp-content" in scan:
+            open('./KRZREV/wordpress.txt', 'a').write(site + "\n")
+        elif '/.env' in scan or '/admin/.env' or '/public_html/.env' or '/public/.env' or '/.env.save' or ':8443/.env' or '/app/.env' or '/dev/.env' or '/.env.backup' or '/.env.dev' or '/.env.php' in scan:
+            open('./KRZREV/laravel-env.txt', 'a').write(site + "\n")
+        elif 'Joomla' in scan and 'com_' in scan:
+            open('./KRZREV/joomla.txt', 'a').write(site + "\n")
+        elif "osCsid" in scan or "ui-widget PRIV8BoxContainer" in scan:
+            open('./KRZREV/oscomerce.txt', 'a').write(site + "\n")
+        elif "/sites/default/" in scan:
+            open('./KRZREV/drupal.txt', 'a').write(site + "\n")
+        elif "/modules/ps_imageslider/" in scan:
+            open('./KRZREV/prestashop.txt', 'a').write(site + "\n")
+        elif 'id="vb-page-body"' in scan or "vBulletin" in scan:
+            open('./KRZREV/vbuletin.txt', 'a').write(site + "\n")
+        elif "index.php?route=" in scan:
+            open('./KRZREV/opencart.txt', 'a').write(site + "\n")
+        elif 'Mage.Cookies' in scan or "text/x-magento-init" in scan:
+            open('./KRZREV/magento.txt', 'a').write(site + "\n")
+
+    def repip(url):
+        global tmip, scankah
+        res = []
+        try:
+            url = url.replace("/", "").replace("https",
+                                               "").replace("http", "").replace(":", "")
+            ip = socket.gethostbyname(url)
+        except:
+            print(url + ' '+'\033[31;1m[ERROR] ───> \033[37;1mBAD IPS')
+            return 0
+        headers = {
+            'User-agent': 'Mozilla/5.0 (Windows; Intel 10.13; rv:52.0) Gecko/20100101 Firefox/52.0'}
+        url = url.replace("/", "").replace("https",
+                                           "").replace("http", "").replace(":", "")
+        if ip in tmip:
+            print(url + "\033[31;1m [DUPLICATE LINE] ───> \033[37;1m REMOVED")
+        else:
+            tmip.append(ip)
+            grab = requests.get(
+                'https://www.threatcrowd.org/searchApi/v2/ip/report/?ip='+ip, headers=headers)
+            if grab.status_code == 200:
+                grab = grab.json()
+                if grab['response_code'] == "1":
+                    for i in grab["resolutions"]:
+                        i['domain'] = i['domain'].replace("webdisk.", "").replace("cpcalendars.", "").replace("autodiscover.", "").replace(
+                            "webmail.", "").replace("mail.", "").replace("cpcontacts.", "").replace("autodiscover.", "").replace("whm.", "").replace("cpanel.", "")
+                        if i['domain'] not in res:
+                            res.append(i["domain"])
+                            hasilrev = tldextract.extract(i["domain"])
+                            i['domain'] = hasilrev.domain + \
+                                "." + hasilrev.suffix
+                            open('./KRZREV/_Domains.txt',
+                                 'a').write(i['domain']+"\n")
+                else:
+                    print(url+"Zero")
+                    print(url +' '+'[\033[32;1mGOOD\033[37;1m]──\033[32;1m>', len(res))
+            if (scankah == "" or scankah.lower() == "y"):
+                scanPool = ThreadPool(50)
+                scanPool.map(checkCms, res)
+                scanPool.close()
+                scanPool.join()
+
+    # options
+    urlpath = input('List : ')
+    if os.path.exists(urlpath):
+        url = open(urlpath, "r").read().splitlines()
+    else:
+        print("\033[31;1mError \033[37;1mList not found!!!")
+        exit()
+    thread = int(input('Thread : '))
+    scankah = input('Auto Check CMS? (Y/n) >')
+
+    print("\n")
+    mainPool = ThreadPool(thread)
+    mainPool.map(repip, url)
+    mainPool.close()
+    mainPool.join()
+    print('\n\033[32;1mSaved \033[37;1min File ./KRZREV/')
+elif select == "4":
+    try:
+           os.mkdir('KRZGRAB')
+    except:
+          pass
+    negara = input("Country : ")
+    singkatan = input("Domain Name : ")
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.0; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0'}
+    res = []
+    
+    try:
+         url = f'https://dataset.domainsproject.org/{negara}/domain2multi-{singkatan}.txt'
+         r = requests.get(url, headers=headers)
+         soup = BeautifulSoup(r.text, 'html.parser')
+         print(r.text)
+         print(r.text)
+         open('KRZGRAB/KRZGRAB_Success!.txt', 'a').write(r.text + "\n")
+    except:
+            pass
+
+    count = 0
+    with open('KRZGRAB/KRZGRAB_Success!.txt', 'rb') as f:
+            for line in f:
+                count += 1
+
+    print('\033[32;1mTotal from country => ' + negara + '=' + str(count))
+    print('Saved , KRZGRAB_Success!.txt')
+else:
+    print("Choose number!!!!")
+
+# Owner Api dVmqvqxHJYFm479gaKGCfwd0xbMMVfBm
